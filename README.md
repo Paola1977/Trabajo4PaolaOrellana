@@ -32,7 +32,6 @@ Sigue estos pasos para configurar el proyecto localmente:
    **BASH**
    ionic serve
 
-
 ---
 
 ## Uso
@@ -43,6 +42,11 @@ Sigue estos pasos para configurar el proyecto localmente:
 
 ## APK
 El archivo APK para instalar la aplicación en dispositivos Android se encuentra en la carpeta "APK Biblioteca Digital" dentro del repositorio.
+
+---
+
+## Consideraciones
+Una de las principales dificultades que enfrenté durante el desarrollo de la aplicación Android fue la integración de la biblioteca EPUB, ya que los libros disponibles están en formato EPUB y requerían una solución específica para su manejo. La implementación de los componentes también representó un desafío, ya que tuve que investigar cómo integrarlos correctamente debido a que la documentación proporcionada en el sitio de IONIC no era completamente clara o detallada.
 
 ---
 
