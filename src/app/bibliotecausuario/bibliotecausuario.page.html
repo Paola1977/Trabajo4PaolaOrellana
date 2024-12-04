@@ -1,0 +1,45 @@
+<ion-header [translucent]="true"></ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="imageContainer">
+    <h1>Libros Disponibles para Lectura</h1>
+  </div>
+
+  <div class="imageContainer">
+    <h1>NOMBRE USUARIO</h1>
+  </div>
+
+  <div class="inputContainer">
+    <label for="seleccionlectura" class="label">Seleccione Libro a Leer</label>
+    <select name="seleccionlectura" id="seleccionlectura" class="input" [(ngModel)]="libroSeleccionado">
+      <option value="">Seleccione un libro</option>
+      <option value="Libro 1">Libro 1</option>
+    </select>
+  </div>
+
+  <div class="imageContainer">
+    <ion-img src="assets/imgs/logo.png" alt="Logo de Biblioteca Digital"></ion-img>
+  </div>
+
+  <div id="container">
+    <ion-button expand="block" (click)="visualizarLibro()">Visualizar Libro</ion-button>
+    <ion-button expand="block" (click)="ir_inicio()">Salir</ion-button>
+  </div>
+
+  <!-- Contenedor del visor EPUB -->
+  <div *ngIf="mostrarVisor" class="visor-overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>{{ libroSeleccionado }}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="cerrarVisor()">Cerrar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <div id="epub-viewer" style="width: 100%; height: calc(100vh - 120px);"></div>
+    <div style="display: flex; justify-content: space-between; margin: 10px;">
+    <ion-button expand="block" (click)="retrocederPagina()">← Anterior</ion-button>
+    <ion-button expand="block" (click)="avanzarPagina()">Siguiente →</ion-button>
+  </div>
+  </div>
+</ion-content>

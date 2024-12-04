@@ -1,0 +1,136 @@
+<ion-header [translucent]="true">
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Biblioteca Digital</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="imageContainer">
+    <h1>Biblioteca Digital</h1>
+  </div>
+
+  <div class="imageContainer">
+    <ion-img src="assets/imgs/logo.png" alt="Logo de Biblioteca Digital"></ion-img>
+  </div>
+
+  <div id="container">
+    <ion-button id="ingreso-alert">Ingreso</ion-button>
+    <ion-button id="nuevo-alert">Nuevo Usuario</ion-button>
+
+    <ion-alert 
+      trigger="ingreso-alert" 
+      header="Ingrese sus Credenciales" 
+      [buttons]="alertButtons" 
+      [inputs]="alertInputs">
+    </ion-alert>
+
+    <ion-alert 
+      trigger="nuevo-alert" 
+      header="Ingrese Datos del Usuario" 
+      [buttons]="alertButtonsNuevos" 
+      [inputs]="alertNuevos">
+    </ion-alert>
+
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const alertButtons = [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+        },
+        {
+          text: 'Aceptar',
+          handler: (data) => {
+            console.log('Usuario:', data.usuario);
+            console.log('Contraseña:', data.password);
+          },
+        },
+      ];
+
+      const alertInputs = [
+        {
+          name: 'usuario',
+          placeholder: 'usuario',
+        },
+        {
+          name: 'password',
+          type: 'password',
+          placeholder: 'contraseña',
+          min: 1,
+          max: 10,
+        },
+      ];
+
+      const alertButtonsNuevos = [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+        },
+        {
+          text: 'Aceptar',
+          handler: (usuario) => {
+            console.log('Rut:', usuario.rut);
+            console.log('Nombres:', usuario.nombre);
+            console.log('Apellidos:', usuario.apellidos);
+            console.log('Email:', usuario.email);
+            console.log('Telefono:', usuario.fono);
+            console.log('Password:', usuario.password);
+          },
+        },
+      ];
+
+      const alertNuevos = [
+        {
+          name: 'rut',
+          placeholder: 'Rut'
+        },
+        {
+          name: 'nombre',
+          type: 'text',
+          placeholder: 'Nombre'
+        },
+        {
+          name: 'apellidos',
+          type: 'text',
+          placeholder: 'Apellidos'
+        },
+        {
+          name: 'email',
+          type: 'email',
+          placeholder: 'E-mail'
+        },
+        {
+          name: 'fono',
+          type: 'tel',
+          placeholder: 'Telefono'
+        },
+        {
+          name: 'password',
+          type: 'password',
+          placeholder: 'Password',
+          min: 1,
+          max: 10
+        },
+        {
+          name: 'repassword',
+          type: 'password',
+          placeholder: 'Reingrese la Contraseña',
+          min: 1,
+          max: 10
+        },
+      ];
+
+      const alertElement = document.querySelector('ion-alert');
+      alertElement.buttons = alertButtons;
+      alertElement.buttons = alertButtonsNuevos;
+      alertElement.inputs = alertInputs;
+      alertElement.inputs = alertNuevos;
+    });
+  </script>  
+</ion-content>

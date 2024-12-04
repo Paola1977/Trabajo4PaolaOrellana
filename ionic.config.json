@@ -1,0 +1,7 @@
+{
+  "name": "Biblioteca Digital",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
