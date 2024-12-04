@@ -37,5 +37,9 @@ Sigue estos pasos para configurar el proyecto localmente:
 2. **Acceso a la Biblioteca Digital**: Tras iniciar sesión, podrán explorar y leer libros.
 ---
 
+## APK
+El archivo APK para instalar la aplicación en dispositivos Android se encuentra en la carpeta "APK Biblioteca Digital" dentro del repositorio.
+---
+
 ## Créditos
 Desarrollado por Paola Orellana Lagos (https://github.com/Paola1977).
