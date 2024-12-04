@@ -13,7 +13,8 @@ Este proyecto es una Biblioteca Digital desarrollada como parte del curso de Tal
 - IONIC Framework: Para desarrollar la aplicación.
 - Capacitor: Para integraciones nativas en dispositivos móviles.
 - CSS: Para el desarrollo de un diseño personalizado.
-- Epub: Biblioteca utilizada para la lectura de los libros en formato Epub.
+- Epub.js: Biblioteca utilizada para la lectura de los libros en formato Epub.
+
 ---
 
 ## Instalación
@@ -30,15 +31,19 @@ Sigue estos pasos para configurar el proyecto localmente:
 3. **Ejecutar en desarrollo**:
    **BASH**
    ionic serve
+
+
 ---
 
 ## Uso
 1. **Registro de usuarios**: Los usuarios deben registrarse antes de acceder al contenido.
 2. **Acceso a la Biblioteca Digital**: Tras iniciar sesión, podrán explorar y leer libros.
+
 ---
 
 ## APK
 El archivo APK para instalar la aplicación en dispositivos Android se encuentra en la carpeta "APK Biblioteca Digital" dentro del repositorio.
+
 ---
 
 ## Créditos
